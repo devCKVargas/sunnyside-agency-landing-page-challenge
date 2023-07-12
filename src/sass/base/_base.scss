@@ -1,0 +1,42 @@
+// reset
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+
+	@supports (min-height: 100svh) {
+		min-height: 100svh;
+	}
+}
+
+@supports (min-height: -moz-available) {
+	html,
+	body {
+		min-height: -moz-available;
+		height: 100%;
+	}
+}
+
+html {
+	height: -webkit-fill-available;
+	scroll-behavior: smooth;
+	font: normal 62.5% / normal $ff-main; //$ 10px
+}
+
+body {
+	:focus {
+		outline: thick solid var(--clr-primary);
+	}
+
+	::selection {
+		background-color: var(--clr-primary);
+		color: var(--clr-white);
+	}
+}
