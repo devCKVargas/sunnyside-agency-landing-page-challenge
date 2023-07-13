@@ -1,0 +1,24 @@
+.hero {
+	display: grid;
+	place-content: center;
+	padding-inline: $padding-inline;
+	height: 100vh;
+	padding-block: $padding-block;
+	// margin-top: calc(($padding-block / -1) - 0.2rem);
+
+	background-image: url(../assets/img/mobile/image-header.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+
+	@include minMedia(600em) {
+		background-image: url(../assets/img/desktop/image-header.jpg);
+	}
+
+	&__arrow {
+		width: max-content;
+		margin-inline: auto;
+		margin-top: min(2vh, 2rem);
+		animation: arrowAnim 1s ease-in-out infinite alternate;
+	}
+}

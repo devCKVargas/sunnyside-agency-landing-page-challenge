@@ -21,7 +21,8 @@ $clr-white: hsl(0, 0%, 100%);
 $ff-main: "Barlow", sans-serif; // 600
 $ff-display: "Fraunces", serif; // 700, 900
 
-$padding-inline: 6rem;
+$padding-block: min(4vw, 4rem);
+$padding-inline: min(6vw, 6rem);
 $full-image-width: calc(100% + $padding-inline);
 
 :root {

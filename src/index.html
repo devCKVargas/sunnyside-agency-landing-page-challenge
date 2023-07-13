@@ -23,9 +23,13 @@
 
 	<body>
 		<div class="container">
-			<header class="header header--container">
+
+			<header>
+				<!-- @ nav -->
 				<nav class="nav">
-					<img src="assets/svg/logo.svg" alt="logo" class="nav__logo">
+					<a href="#">
+						<img src="assets/svg/logo.svg" alt="logo" class="nav__logo">
+					</a>
 					<ul class="nav__list">
 						<li class="nav__item">
 							<a href="#">about</a>
@@ -41,53 +45,119 @@
 						</li>
 					</ul>
 				</nav>
-				<div class="hero">
+				<!-- @ end of nav -->
+				<!-- @ end of header -->
+			</header>
+
+			<main>
+				<section class="hero">
 					<h1 class="heading-primary">
 						We are creatives
 					</h1>
-					<a href="#section-one">
-						<img src="assets/svg/icon-arrow-down.svg" alt="arrow down" class="hero__arrow">
+					<a href="#about" class="hero__arrow">
+						<picture>
+							<source media="(min-width: 300px)" srcset="assets/svg/icon-arrow-down.svg">
+							<img src="assets/svg/icon-arrow-down-wearables.svg" alt="arrow down" class="hero__arrow-img">
+						</picture>
 					</a>
-				</div>
-			</header>
+					<!-- @ end of hero -->
+				</section>
 
-			<section id="section-one" class="section-one">
-				<div class="section-one__content">
-					<h2 class="heading-secondary">
-						Transform your brand
-					</h2>
-					<p class="paragraph">
-						We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
-					</p>
-					<a href="#" class="cta section-one--cta">
-						Learn more
-					</a>
-				</div>
-				<figure class="section-one__img-container">
-					<img src="assets/img/mobile/image-transform.jpg" alt="egg" sizes="" srcset="" class="section-one__img">
-				</figure>
+				<section id="about" class="about">
 
-			</section>
-			<section id="section-two" class="section-two">
-				<div class="section-two__content">
-					<h2 class="heading-secondary">
-						Stand out to the right audience
-					</h2>
-					<p class="paragraph">
-						Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.
-					</p>
-					<a href="#" class="cta section-two--cta">
-						Learn more
-					</a>
-				</div>
-				<figure class="section-two__img-container">
-					<img src="assets/img/desktop/image-stand-out.jpg" alt="cup" sizes="" srcset="" class="section-two__img">
-				</figure>
+					<picture class="about__img-container">
+						<source media="(min-width: 600px)" srcset="assets/img/desktop/image-transform.jpg">
+						<img src="assets/img/mobile/image-transform.jpg" alt="egg" class="about__img">
+					</picture>
+					<div class="about__text">
+						<h2 class="heading-secondary">
+							Transform your brand
+						</h2>
+						<p class="paragraph">
+							We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
+						</p>
+						<a href="#" class="cta about--cta">
+							Learn more
+						</a>
+					</div>
 
-			</section>
+					<picture class="about__img-container">
+						<source media="(min-width: 600px)" srcset="assets/img/desktop/image-stand-out.jpg">
+						<img src="assets/img/mobile/image-stand-out.jpg" alt="cup" class="about__img">
+					</picture>
+					<div class="about__text">
+						<h2 class="heading-secondary">
+							Stand out to the right audience
+						</h2>
+						<p class="paragraph">
+							Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.
+						</p>
+						<a href="#" class="cta about--cta">
+							Learn more
+						</a>
+					</div>
+					<!-- @ end of about-section -->
+				</section>
 
 
-			<footer></footer>
+				<section id="services" class="services">
+					<picture class="services__img-container services__img-container--cherry">
+						<source media="(min-width: 600px)" srcset="assets/img/desktop/image-graphic-design.jpg">
+						<img src="assets/img/mobile/image-graphic-design.jpg" alt="cherry" class="services__img">
+					</picture>
+					<div class="services__text services__text--graphic">
+						<h2 class="heading-secondary">
+							Graphic design
+						</h2>
+						<p class="paragraph">
+							Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention.
+						</p>
+					</div>
+					<picture class="services__img-container services__img-container--orange">
+						<source media="(min-width: 600px)" srcset="assets/img/desktop/image-photography.jpg">
+						<img src="assets/img/mobile/image-photography.jpg" alt="orange" class="services__img">
+					</picture>
+					<div class="services__text services__text--photography">
+						<h2 class="heading-secondary">
+							Photography
+						</h2>
+						<p class="paragraph">
+							Increase your credibility by getting the most stunning,high-quality photos that improve your business image.
+						</p>
+					</div>
+					<!-- @ end of services -->
+				</section>
+
+
+				<!-- <section id="testimonials" class="testimonials">
+					Client testimonials
+
+					We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+					Emily R.
+					Marketing Director
+
+					Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
+					Thomas S.
+					Chief Operating Officer
+
+					Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+					Jennie F.
+					Business Owner
+				</section> -->
+
+				<!-- 
+				About
+				Services
+				Projects
+				Contact -->
+
+				<!-- @ end of main -->
+			</main>
+
+			<footer>
+
+				<!-- @ end of footer -->
+			</footer>
 
 		</div>
 	</body>

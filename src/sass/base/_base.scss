@@ -40,3 +40,31 @@ body {
 		color: var(--clr-white);
 	}
 }
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	:after,
+	:before {
+		scroll-behavior: auto !important;
+		-webkit-animation-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		-webkit-animation-iteration-count: 1 !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+.about {
+	:focus {
+		outline: thick solid var(--clr-accent);
+	}
+
+	::selection {
+		background-color: var(--clr-accent);
+		color: var(--clr-white);
+	}
+}

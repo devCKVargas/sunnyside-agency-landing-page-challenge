@@ -8,11 +8,20 @@ h3 {
 	font-family: $ff-display;
 }
 
-// h2 {
-// }
+.about {
+	color: var(--clr-neutral-1);
 
-// h3 {
-// }
+	&--cta {
+		&::before {
+			background-color: var(--clr-accent);
+		}
+	}
 
-// p {
-// }
+	.paragraph {
+		color: var(--clr-neutral-3);
+	}
+}
+
+.services {
+	color: var(--clr-graphic-text);
+}
