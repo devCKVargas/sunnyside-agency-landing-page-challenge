@@ -1,0 +1,73 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts/" as *;
+
+.nav {
+	position: relative;
+
+	@include minMedia($breakpoint-md) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__list {
+		list-style: none;
+
+		display: flex;
+		flex-direction: column;
+		background-color: var(--clr-white);
+
+		position: relative;
+		top: 2rem;
+
+		@include minMedia($breakpoint-md) {
+			flex-direction: row;
+			align-items: center;
+			background-color: initial;
+			top: 0;
+			gap: 5rem;
+		}
+	}
+
+	&__item {
+		--padding-block: 2rem;
+		@include minMedia($breakpoint-md) {
+			--padding-block: 1.5rem;
+		}
+		a:link,
+		a:visited {
+			display: block;
+			padding-block: var(--padding-block);
+
+			&:hover {
+				background-color: lightsalmon;
+			}
+
+			@include minMedia($breakpoint-md) {
+				padding: 0;
+			}
+		}
+
+		&--contact {
+			a:link,
+			a:visited {
+				padding-block: var(--padding-block);
+				background-color: var(--clr-neutral-4);
+
+				&:hover {
+					background-color: lightsalmon;
+				}
+
+				@include minMedia($breakpoint-md) {
+					--padding-inline: 3rem;
+					display: inline-block;
+					border-radius: 999rem;
+					padding-inline: var(--padding-inline);
+				}
+			}
+		}
+	}
+}

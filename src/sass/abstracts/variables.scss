@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide variables.
+// -----------------------------------------------------------------------------
+
+//! SASS
+// font-family
+
+$ff-main:
+	"Barlow",
+	system-ui,
+	-apple-system,
+	BlinkMacSystemFont,
+	"Segoe UI",
+	Roboto,
+	Oxygen,
+	Ubuntu,
+	Cantarell,
+	"Open Sans",
+	"Helvetica Neue",
+	sans-serif;
+
+$ff-accent:
+	"Fraunces",
+	system-ui,
+	-apple-system,
+	BlinkMacSystemFont,
+	"Segoe UI",
+	Roboto,
+	Oxygen,
+	Ubuntu,
+	Cantarell,
+	"Open Sans",
+	"Helvetica Neue",
+	sans-serif;
+
+// colors
+$clr-white: #fff;
+$clr-black: #000;
+
+// Container's maximum width
+$max-width: 192rem !default;
+
+$white: #fff;
+$black: #000;
+
+$padding-inline: 4rem;
+
+$logo-size: 12.4rem;
+
+$breakpoint-md: 730em;
+// $breakpoint-lg: 900em;
+
+//! CSS Variables
+// colors
+:root {
+	--clr-primary: hsl(7, 99%, 70%);
+	--clr-accent: hsl(51, 100%, 49%);
+	--clr-graphic-text: hsl(167, 40%, 24%);
+	--clr-photo-text-: hsl(198, 62%, 26%);
+	--clr-footer: hsl(168, 34%, 41%);
+
+	// Neutral
+
+	--clr-white: hsl(0, 0%, 100%);
+	--clr-neutral-1: hsl(210, 4%, 67%);
+	--clr-neutral-2: hsl(232, 10%, 55%);
+	--clr-neutral-3: hsl(213, 9%, 39%);
+	--clr-neutral-4: hsl(212, 27%, 19%);
+	--clr-black: hsl(0, 0%, 0%);
+}

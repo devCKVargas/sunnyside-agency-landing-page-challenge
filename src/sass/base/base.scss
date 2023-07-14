@@ -1,0 +1,105 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts/" as *;
+
+#__bs_notify__ {
+	top: 95% !important;
+	right: 10px !important;
+	border-radius: 15px !important;
+	height: 60px !important;
+	filter: opacity(50%) !important;
+}
+
+// reset
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+
+	@supports (min-height: 100svh) {
+		min-height: 100svh;
+	}
+}
+
+@supports (min-height: -moz-available) {
+	html,
+	body {
+		min-height: -moz-available;
+		height: 100%;
+	}
+}
+
+html {
+	height: -webkit-fill-available;
+	scroll-behavior: smooth;
+	line-height: normal;
+	font-family: $ff-main;
+	font-weight: normal;
+	font-size: 62.5%; //$ 10px
+}
+
+body {
+	:focus {
+		outline: thick solid var(--clr-primary);
+	}
+
+	::selection {
+		background-color: var(--clr-primary);
+		color: var(--clr-white);
+	}
+}
+
+a {
+	text-decoration: none;
+	// color: $somecolor;
+
+	// @include on-event {
+	// 	color: $text-color;
+	// 	text-decoration: underline;
+	// }
+}
+
+/**
+ * Links w/out class will have default style
+ */
+a:not([class]) {
+	text-decoration: underline;
+}
+
+img,
+picture {
+	display: block;
+	// width: 100%;
+	max-width: 100%;
+}
+
+input,
+button,
+text-area,
+select {
+	font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

@@ -1,0 +1,46 @@
+/**
+ * Basic typography style for copy text
+ */
+
+@use "../abstracts/" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+body {
+	font-size: 1.8rem;
+	color: var(--clr-neutral-4);
+}
+
+.nav {
+	&__list {
+		text-align: center;
+	}
+
+	&__item {
+		a:link,
+		a:visited {
+			font-family: $ff-main;
+			text-decoration: none;
+
+			color: var(--clr-neutral-4);
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&--contact {
+			a:link,
+			a:visited {
+				font-family: $ff-accent;
+				text-decoration: none;
+
+				color: var(--clr-white);
+
+				@include minMedia($breakpoint-md) {
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
