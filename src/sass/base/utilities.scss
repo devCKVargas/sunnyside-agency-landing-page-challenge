@@ -11,7 +11,8 @@
  */
 .hide-text {
 	overflow: hidden;
-	padding: 0; /* 1 */
+	padding: 0;
+	/* 1 */
 	text-indent: 101%;
 	white-space: nowrap;
 }
@@ -33,14 +34,9 @@
 }
 
 .container {
-	max-width: $max-width;
 	margin-inline: auto;
-	padding-inline: $padding-inline;
+	// padding-inline: $padding-inline;
+	max-width: $max-width;
 	width: 100%;
 	outline: 3px solid palegreen;
-}
-
-.logo {
-	min-width: $logo-size;
-	background: palevioletred;
 }

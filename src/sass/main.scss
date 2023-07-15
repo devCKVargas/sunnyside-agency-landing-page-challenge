@@ -1,7 +1,8 @@
 // 1. Configuration
-@use "abstracts/variables";
-@use "abstracts/functions";
 @use "abstracts/mixins";
+@use "abstracts/functions";
+@use "abstracts/variables";
+@use "abstracts/animations.scss";
 
 // 2. Vendors
 @use "vendors/normalized";
@@ -14,10 +15,13 @@
 
 // 4. Layout-related sections
 @use "layout/header";
+@use "layout/hero";
+@use "layout/product";
 @use "layout/footer";
 
 // 5. Components
-@use "components/button";
+@use "components/logo";
+@use "components/cta";
 
 // 6. Page-specific styles
 @use "pages/home";

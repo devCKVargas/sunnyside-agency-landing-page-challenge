@@ -31,6 +31,7 @@ body {
 }
 
 @supports (min-height: -moz-available) {
+
 	html,
 	body {
 		min-height: -moz-available;
@@ -41,13 +42,11 @@ body {
 html {
 	height: -webkit-fill-available;
 	scroll-behavior: smooth;
-	line-height: normal;
-	font-family: $ff-main;
-	font-weight: normal;
-	font-size: 62.5%; //$ 10px
 }
 
 body {
+	color: var(--clr-neutral-4);
+
 	:focus {
 		outline: thick solid var(--clr-primary);
 	}
@@ -56,6 +55,12 @@ body {
 		background-color: var(--clr-primary);
 		color: var(--clr-white);
 	}
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
 }
 
 a {

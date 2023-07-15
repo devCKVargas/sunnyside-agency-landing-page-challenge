@@ -3,11 +3,12 @@
 // -----------------------------------------------------------------------------
 
 // Event wrapper
-// @author Harry Roberts
-// @param {Bool} $self [false] - Whether or not to include current selector
-// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+// author Harry Roberts
+// param {Bool} $self [false] - Whether or not to include current selector
+// link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
 @mixin on-event($self: false) {
 	@if $self {
+
 		&,
 		&:hover,
 		&:active,
@@ -15,7 +16,10 @@
 		&:focus-within {
 			@content;
 		}
-	} @else {
+	}
+
+	@else {
+
 		&:hover,
 		&:active,
 		&:focus,
@@ -26,13 +30,15 @@
 }
 
 // Make a context based selector a little more friendly
-// @author Kitty Giraudel
-// @param {String} $context
+// author Kitty Giraudel
+// param {String} $context
 @mixin when-inside($context) {
 	#{$context} & {
 		@content;
 	}
 }
+
+// mine
 
 @mixin minMedia($breakpoint) {
 	@media only screen and (min-width: calc($breakpoint / 16)) {
@@ -51,4 +57,12 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+@mixin hover {
+
+	&:hover,
+	&:focus {
+		@content;
+	}
 }

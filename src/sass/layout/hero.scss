@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+
+.hero {
+	height: 100vh;
+	background: no-repeat bottom/cover url(../assets/img/mobile/image-header.jpg);
+
+	@include minMedia(600em) {
+		background: no-repeat bottom/cover url(../assets/img/desktop/image-header.jpg);
+	}
+
+	display: grid;
+	place-content: center;
+	padding-inline: var(--padding-inline);
+
+	&__arrow {
+		cursor: pointer;
+		margin-inline: auto;
+		animation: arrow-anim 1s ease-in-out infinite alternate;
+	}
+}

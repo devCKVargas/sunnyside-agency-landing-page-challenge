@@ -4,68 +4,115 @@
 
 @use "../abstracts/" as *;
 
+.sticky {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-block: 1.5rem;
+
+	//! in JS
+	// top: 2rem;
+	// background-color: var(--clr-primary);
+}
+
 .nav {
-	position: relative;
+	--gap: min(2vw, 2rem);
+	padding-inline: var(--padding-inline);
+	// outline: 2px solid green;
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap);
 
 	@include minMedia($breakpoint-md) {
-		display: flex;
+		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
+		max-width: $max-width;
+		margin-inline: auto;
 	}
 
 	&__list {
 		list-style: none;
+		text-align: center;
 
-		display: flex;
-		flex-direction: column;
 		background-color: var(--clr-white);
-
-		position: relative;
-		top: 2rem;
+		display: none; //$ default state
+		// display: block; //! in JS
 
 		@include minMedia($breakpoint-md) {
-			flex-direction: row;
+			display: flex;
 			align-items: center;
-			background-color: initial;
+			background-color: transparent;
 			top: 0;
-			gap: 5rem;
+			gap: var(--gap);
 		}
 	}
 
 	&__item {
 		--padding-block: 2rem;
+		--padding-inline: 3rem;
+
 		@include minMedia($breakpoint-md) {
-			--padding-block: 1.5rem;
+			--padding-block: 1.25rem;
+			--padding-inline: 1.5rem;
 		}
+
+		:focus {
+			border-radius: 999rem;
+		}
+
 		a:link,
 		a:visited {
+			text-decoration: none;
+			color: var(--clr-neutral-2);
+
 			display: block;
 			padding-block: var(--padding-block);
+			padding-inline: var(--padding-inline);
 
-			&:hover {
-				background-color: lightsalmon;
+			@include hover {
+				background-color: var(--clr-accent);
+				color: var(--clr-neutral-4);
+
+				@include minMedia($breakpoint-md) {
+					background-color: initial;
+				}
 			}
 
 			@include minMedia($breakpoint-md) {
-				padding: 0;
+				color: var(--clr-white);
 			}
 		}
 
 		&--contact {
+
 			a:link,
 			a:visited {
-				padding-block: var(--padding-block);
-				background-color: var(--clr-neutral-4);
+				color: var(--clr-neutral-4);
+				text-transform: uppercase;
+				background: var(--clr-accent);
 
-				&:hover {
-					background-color: lightsalmon;
+				// padding-block: var(--padding-block);
+
+				@include hover {
+					color: var(--clr-white);
 				}
 
 				@include minMedia($breakpoint-md) {
-					--padding-inline: 3rem;
+					// --padding-inline: 2rem;
+					background: var(--clr-white);
+					text-transform: uppercase;
+
 					display: inline-block;
 					border-radius: 999rem;
-					padding-inline: var(--padding-inline);
+					// padding-inline: var(--padding-inline);
+
+					@include hover {
+						background-color: var(--clr-contact);
+						color: var(--clr-white);
+					}
 				}
 			}
 		}
