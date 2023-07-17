@@ -1,30 +1,11 @@
-// 1. Configuration
-@use "abstracts/mixins";
-@use "abstracts/functions";
-@use "abstracts/variables";
-@use "abstracts/animations.scss";
-
-// 2. Vendors
-@use "vendors/normalized";
-
-// 3. Base stuff
-@use "base/base";
-@use "base/fonts";
-@use "base/typography";
-@use "base/utilities";
-
-// 4. Layout-related sections
-@use "layout/header";
-@use "layout/hero";
-@use "layout/product";
-@use "layout/footer";
-
-// 5. Components
-@use "components/logo";
-@use "components/cta";
+@use "abstracts";
+@use "vendors";
+@use "base";
+@use "layout";
+@use "components";
 
 // 6. Page-specific styles
-@use "pages/home";
+@use "pages";
 
 // 7. Themes
-@use "themes/default";
+@use "themes";

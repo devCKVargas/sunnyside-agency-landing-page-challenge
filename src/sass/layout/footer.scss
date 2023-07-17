@@ -1,3 +1,50 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
+@use "../abstracts/" as *;
+
+.footer {
+	background: var(--bg-footer);
+	padding: 8rem var(--padding-inline);
+	flex-direction: column;
+
+	.logo {
+		margin-inline: auto;
+		min-width: 20rem;
+	}
+
+	&__socials {
+		margin-top: 4rem;
+		display: flex;
+		justify-content: center;
+		list-style: none;
+		gap: 4rem;
+	}
+
+	.nav {
+
+		// &__logo {}
+
+		&__list {
+			display: flex;
+			background: initial;
+			justify-content: center;
+
+			a:link,
+			a:visited {
+				padding-inline: 1rem;
+
+				@include hover {
+					background-color: initial;
+				}
+			}
+		}
+
+		&__item {
+
+			a:link,
+			a:visited {
+				color: var(--clr-footer);
+			}
+		}
+
+
+	}
+}

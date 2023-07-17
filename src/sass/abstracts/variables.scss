@@ -32,12 +32,14 @@ $ff-accent: "Fraunces",
 	sans-serif;
 
 // Container's maximum width
-$max-width: 192rem !default;
+$max-width: 192rem;
 
 // breakpoint
-$breakpoint-sm: 510em;
-$breakpoint-md: 730em;
-// $breakpoint-lg: 900em;
+// $breakpoint-sm: 320em;
+
+$breakpoint-md: 600em; // tab-port
+$breakpoint-lg: 900em; // tab-land - desktop
+$breakpoint-xl: 1200em; // xl desktop
 
 $logo-size: 12.4rem;
 
@@ -47,7 +49,7 @@ $logo-size: 12.4rem;
 	--clr-primary: hsl(7, 99%, 70%);
 	--clr-accent: hsl(51, 100%, 49%);
 	--clr-graphic-text: hsl(167, 40%, 24%);
-	--clr-photo-text-: hsl(198, 62%, 26%);
+	--clr-photo-text: hsl(198, 62%, 26%);
 	--clr-footer: hsl(168, 34%, 41%);
 
 	// neutrals
@@ -61,18 +63,7 @@ $logo-size: 12.4rem;
 	// alphas
 	--clr-contact: hsl(0, 0%, 100%, 20%);
 
-	// font sizes
-
-	--step--3: clamp(0.43rem, calc(0.32rem + 0.59vw), 1.02rem); // 6.94px → 16.38px
-	--step--2: clamp(0.52rem, calc(0.37rem + 0.76vw), 1.28rem); // 8.33px → 20.48px
-	--step--1: clamp(0.63rem, calc(0.43rem + 0.98vw), 1.60rem); // 10.00px → 25.60px
-	--step-0: clamp(0.75rem, calc(0.50rem + 1.25vw), 2.00rem); // 12.00px → 32.00px
-	--step-1: clamp(0.90rem, calc(0.58rem + 1.60vw), 2.50rem); // 14.40px → 40.00px
-	--step-2: clamp(1.08rem, calc(0.67rem + 2.05vw), 3.13rem); // 17.28px → 50.00px
-	--step-3: clamp(1.30rem, calc(0.77rem + 2.61vw), 3.91rem); // 20.74px → 62.50px
-	--step-4: clamp(1.56rem, calc(0.89rem + 3.33vw), 4.88rem); // 24.88px → 78.13px
-	--step-5: clamp(1.87rem, calc(1.02rem + 4.24vw), 6.10rem); // 29.86px → 97.66px
-	--step-6: clamp(2.24rem, calc(1.16rem + 5.39vw), 10rem); // 35.83px → 100px
+	--bg-footer: hsl(166, 36%, 73%);
 
 	// spacing
 	--padding-block: min(6vw, 6rem);

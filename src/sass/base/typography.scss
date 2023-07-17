@@ -1,73 +1,89 @@
-/**
- * Basic typography style for copy text
- */
-
 @use "../abstracts/" as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
 
 html {
-	line-height: 1.4;
-	line-height: normal;
+	line-height: 1.6;
 	font-family: $ff-main;
 	font-weight: normal;
-	// font-size: 62.5%; //$ 10px
-	font-size: 10px;
-
-	@include maxMedia($breakpoint-sm) {
-		// font-size: 50%;
-	}
+	font-size: 62.5%; //$ 10px
 }
 
 body {
 	font-size: 1.8rem;
-	font-size: var(--step-1);
 }
 
-.nav {
-	&__item {
+h1,
+h2,
+h3,
+p {
+	// text-wrap: balance; //$ experimental: chrome/edge 114, opera 99
 
-		a:link,
-		a:visited {
-			font-family: $ff-main;
-		}
-
-		&--contact {
-
-			a:link,
-			a:visited {
-				font-family: $ff-accent;
-			}
-		}
-	}
 }
 
-.heading-primary,
-.heading-secondary,
-.heading-tertiary {
+h1,
+h2,
+h3 {
 	font-family: $ff-accent;
 	font-weight: 900;
-	// text-wrap: balance; //$ experimental: chrome/edge 114, opera 99
 }
 
-.heading-primary {
-	font-size: var(--step-6);
+h1 {
 	letter-spacing: 1rem;
 	text-transform: uppercase;
 	text-align: center;
 	color: var(--clr-white);
+
+	font-size: 2.8rem;
+
+
+	@include minMedia($breakpoint-md) {
+		font-size: 4rem;
+	}
+
+	@include minMedia($breakpoint-lg) {
+		font-size: 10rem;
+
+	}
 }
 
-.heading-secondary {
-	font-size: var(--step-4);
+h2 {
+	font-size: 2.4rem;
+
+	@include minMedia($breakpoint-md) {
+		font-size: 3rem;
+	}
+
+	@include minMedia($breakpoint-lg) {
+		font-size: 4rem;
+	}
+
+	@include minMedia($breakpoint-xl) {
+		font-size: 5.6rem;
+	}
 }
 
-.heading-tertiary {
-	font-size: var(--step-3);
+h3 {
+	font-size: 2rem;
+
+	@include minMedia($breakpoint-md) {
+		font-size: 2.4rem;
+	}
+
+	@include minMedia($breakpoint-lg) {
+		font-size: 3rem;
+	}
 }
 
-.paragraph {
-	font-size: var(--step-1);
+p {
+	font-size: 1.6rem;
 	color: var(--clr-neutral-2);
-	// text-wrap: balance; //$ experimental: chrome/edge 114, opera 99
+
+	@include minMedia($breakpoint-md) {
+		font-size: 1.8rem;
+	}
+
+	@include minMedia($breakpoint-lg) {
+		font-size: 2.2rem;
+	}
 }
