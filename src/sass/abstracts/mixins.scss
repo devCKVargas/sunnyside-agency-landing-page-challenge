@@ -62,7 +62,7 @@
 @mixin hover {
 
 	&:hover,
-	&:focus {
+	&:focus-visible {
 		@content;
 	}
 }

@@ -8,7 +8,6 @@ $row-size-lg: 68rem;
 	$padding-inline: min(5rem, 5vw); // #3
 	$padding-inline: 3rem; // #3
 	$padding-block: 4.5rem; // #2
-	// --padding-block: min(6rem, 6vw); // #2
 
 	display: grid;
 	grid-template-columns: 1fr;
@@ -20,10 +19,6 @@ $row-size-lg: 68rem;
 	@include minMedia($breakpoint-lg) {
 		grid-template-rows: $row-size-lg;
 	}
-
-	// @include minMedia($breakpoint-xl) {
-	// 	grid-template-rows: $row-size-lg;
-	// }
 
 	&__img,
 	img {
@@ -38,8 +33,6 @@ $row-size-lg: 68rem;
 		justify-content: center;
 		align-items: center;
 		gap: $gap; // #1
-
-		// border: 15px solid paleturquoise;
 		max-width: $max-width;
 		margin-inline: auto;
 		padding-block: $padding-block; // #2
@@ -67,7 +60,7 @@ $row-size-lg: 68rem;
 	}
 
 	&--first {
-		:focus {
+		:focus-visible {
 			outline: thick solid var(--clr-accent);
 		}
 
@@ -141,7 +134,6 @@ $row-size-lg: 68rem;
 		align-items: center;
 		height: 100%;
 		gap: 2rem;
-		// padding-bottom: min(8rem, 20vw);
 		padding-bottom: 4rem;
 		padding-inline: 3rem;
 		padding-inline: $padding-inline;

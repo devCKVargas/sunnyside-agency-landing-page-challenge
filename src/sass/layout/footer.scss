@@ -1,28 +1,39 @@
 @use "../abstracts/" as *;
 
-.footer {
-	background: var(--bg-footer);
+footer {
 	padding: 8rem var(--padding-inline);
-	flex-direction: column;
+	background: var(--bg-footer);
 
-	.logo {
-		margin-inline: auto;
-		min-width: 20rem;
+	::selection {
+		background-color: var(--clr-footer);
 	}
 
-	&__socials {
-		margin-top: 4rem;
-		display: flex;
-		justify-content: center;
-		list-style: none;
-		gap: 4rem;
+
+
+	.logo-container {
+		margin-inline: auto;
 	}
 
 	.nav {
+		flex-direction: column;
+		margin-top: 4rem;
+		gap: 4rem;
 
-		// &__logo {}
+		&__socials {
+			display: flex;
+			justify-content: center;
+			list-style: none;
+			gap: 4rem;
+
+			li {
+				@include hover {
+					filter: brightness(30%);
+				}
+			}
+		}
 
 		&__list {
+			position: initial;
 			display: flex;
 			background: initial;
 			justify-content: center;
@@ -42,9 +53,8 @@
 			a:link,
 			a:visited {
 				color: var(--clr-footer);
+
 			}
 		}
-
-
 	}
 }

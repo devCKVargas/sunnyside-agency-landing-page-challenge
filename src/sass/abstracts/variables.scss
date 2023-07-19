@@ -1,10 +1,6 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide variables.
-// -----------------------------------------------------------------------------
+//! SASS Variables
 
-//! SASS
 // font-family
-
 $ff-main: "Barlow",
 	system-ui,
 	-apple-system,
@@ -31,17 +27,16 @@ $ff-accent: "Fraunces",
 	"Helvetica Neue",
 	sans-serif;
 
-// Container's maximum width
-$max-width: 192rem;
+$max-width: 192rem; // Container's maximum width
 
-// breakpoint
-// $breakpoint-sm: 320em;
-
+// breakpoints
+$breakpoint-nav: 700em;
 $breakpoint-md: 600em; // tab-port
 $breakpoint-lg: 900em; // tab-land - desktop
 $breakpoint-xl: 1200em; // xl desktop
 
-$logo-size: 12.4rem;
+$logo-min-size: 12.4rem;
+$logo-size: 20rem;
 
 //! CSS Variables
 :root {
@@ -63,7 +58,11 @@ $logo-size: 12.4rem;
 	// alphas
 	--clr-contact: hsl(0, 0%, 100%, 20%);
 
+	// background
 	--bg-footer: hsl(166, 36%, 73%);
+
+	// selection
+	--selection-background: var(--clr-primary);
 
 	// spacing
 	--padding-block: min(6vw, 6rem);

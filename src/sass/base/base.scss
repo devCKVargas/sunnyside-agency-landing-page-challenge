@@ -47,8 +47,8 @@ html {
 body {
 	color: var(--clr-neutral-4);
 
-	:focus {
-		outline: thick solid var(--clr-primary);
+	:focus-visible {
+		outline: thick solid var(--selection-background);
 	}
 
 	::selection {

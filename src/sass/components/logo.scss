@@ -1,6 +1,13 @@
 @use "../abstracts/" as *;
 
+.logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: max-content;
+}
+
 .logo {
-	min-width: $logo-size;
-	// background: palevioletred;
+	min-width: $logo-min-size;
+	width: $logo-size;
 }

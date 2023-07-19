@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="css/main.css" />
 
 		<!--@ js -->
-		<!-- <script defer src="js/script.js"></script> -->
+		<script defer src="js/script.js"></script>
 
 		<!--@ title -->
 		<title>Frontend Mentor | Sunnyside</title>
@@ -27,6 +27,7 @@
 				right: 1rem;
 				font-size: 11px;
 				text-align: center;
+				color: #dede;
 			}
 
 			.attribution a {
@@ -38,34 +39,41 @@
 	<body>
 		<div class="container">
 
-			<header class="sticky">
-				<nav class="nav" aria-label="primary navigation">
-					<a href="#" class="nav__logo">
+			<header>
+				<div class="header-container">
+					<a href="#" class="logo-container">
 						<img src="assets/svg/logo.svg" alt="Sunnyside’s logo" class="logo">
 					</a>
-					<ul class="nav__list">
-						<li class="nav__item">
-							<a href="#">
-								About
-							</a>
-						</li>
-						<li class="nav__item">
-							<a href="#">
-								Services
-							</a>
-						</li>
-						<li class="nav__item">
-							<a href="#">
-								Projects
-							</a>
-						</li>
-						<li class="nav__item nav__item--contact">
-							<a href="#">
-								Contact
-							</a>
-						</li>
-					</ul>
-				</nav>
+					<nav class="nav" aria-label="primary navigation">
+						<!-- <span class="nav__menu"> -->
+						<button type="button" class="btn nav__menu">
+							<img src="assets/svg/icon-hamburger.svg" alt="navigation menu">
+						</button>
+						<!-- </span> -->
+						<ul class="nav__list hidden">
+							<li class="nav__item">
+								<a href="#">
+									About
+								</a>
+							</li>
+							<li class="nav__item">
+								<a href="#">
+									Services
+								</a>
+							</li>
+							<li class="nav__item">
+								<a href="#">
+									Projects
+								</a>
+							</li>
+							<li class="nav__item nav__item--contact">
+								<a href="#">
+									Contact
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 
 				<!-- end of header -->
 			</header>
@@ -79,7 +87,6 @@
 						<a href="#product-section" class="hero__arrow">
 							<picture>
 								<source srcset="assets/svg/icon-arrow-down-wearables.svg" media="(max-width: 18.75em)">
-								source
 								<img src="assets/svg/icon-arrow-down.svg" alt="arrow pointing down" class="hero__arrow-img">
 							</picture>
 						</a>
@@ -222,10 +229,10 @@
 			</main>
 
 			<footer>
-				<nav class="footer nav" aria-label="footer navigation">
-					<a href="#" class="nav__logo">
-						<img src="assets/svg/logo-cyan.svg" alt="Sunnyside’s logo" class="logo">
-					</a>
+				<a href="#" class="logo-container">
+					<img src="assets/svg/logo-cyan.svg" alt="Sunnyside’s logo" class="logo">
+				</a>
+				<nav class="nav nav--footer" aria-label="footer navigation">
 					<ul class="nav__list">
 						<li class="nav__item">
 							<a href="#">
@@ -243,7 +250,7 @@
 							</a>
 						</li>
 					</ul>
-					<ul class="footer__socials">
+					<ul class="nav__socials">
 						<li>
 							<a href="#">
 								<img src="assets/svg/icon-facebook.svg" alt="facebook logo">
