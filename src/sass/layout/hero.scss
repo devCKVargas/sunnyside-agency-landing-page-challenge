@@ -2,10 +2,10 @@
 
 .hero {
 	height: 100vh;
-	background: no-repeat bottom/cover url(../assets/img/mobile/image-header.jpg);
+	background: no-repeat bottom/cover url(../assets/img/mobile-header.jpg);
 
 	@include minMedia(600em) {
-		background: no-repeat bottom/cover url(../assets/img/desktop/image-header.jpg);
+		background: no-repeat bottom/cover url(../assets/img/desktop-header.jpg);
 	}
 
 	display: grid;
