@@ -1,7 +1,3 @@
-// -----------------------------------------------------------------------------
-// This file contains very basic styles.
-// -----------------------------------------------------------------------------
-
 @use "../abstracts/" as *;
 
 #__bs_notify__ {
@@ -48,7 +44,7 @@ body {
 	color: var(--clr-neutral-4);
 
 	:focus-visible {
-		outline: thick solid var(--selection-background);
+		outline: thick solid var(--selection-bg);
 	}
 
 	::selection {
@@ -81,7 +77,6 @@ a:not([class]) {
 img,
 picture {
 	display: block;
-	// width: 100%;
 	max-width: 100%;
 }
 

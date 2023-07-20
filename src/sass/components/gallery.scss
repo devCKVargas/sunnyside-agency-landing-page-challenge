@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+.gallery-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	@include minMedia($breakpoint-md) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	picture,
+	img {
+		width: 100%;
+	}
+}

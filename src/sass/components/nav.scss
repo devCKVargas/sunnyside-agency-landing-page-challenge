@@ -6,14 +6,6 @@
 	flex-direction: column;
 	gap: var(--gap);
 
-	@include minMedia($breakpoint-nav) {
-		// align-items: center;
-		// flex-direction: row;
-		// justify-content: space-between;
-		// max-width: $max-width;
-		// margin-inline: auto;
-	}
-
 	&__menu {
 		cursor: pointer;
 		right: var(--padding-inline);
@@ -68,8 +60,6 @@
 			}
 		}
 	}
-
-
 
 	&__item {
 		--padding-block: 2rem;

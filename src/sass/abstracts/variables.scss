@@ -65,17 +65,10 @@ $header-bg-transition: .3s ease-in-out;
 	--bg-footer: hsl(166, 36%, 73%);
 
 	// selection
-	--selection-background: var(--clr-primary);
+	--selection-bg: var(--clr-primary);
 
 	// spacing
 	--padding-block: min(6vw, 6rem);
 	--padding-inline: min(4vw, 4rem);
 	--padding-block-header: 1.4rem;
-
-	// --padding-block: min(10vw, 6rem);
-	// --padding-inline: min(10vw, 6rem);
-}
-
-* {
-	// outline: 3px solid salmon;
 }

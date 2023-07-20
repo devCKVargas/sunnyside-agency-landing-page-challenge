@@ -7,6 +7,10 @@ header {
 	left: 0;
 	width: 100%;
 	transition: $header-bg-transition;
+
+	::selection {
+		background-color: var(--selection-bg);
+	}
 }
 
 .header-container {
@@ -16,8 +20,4 @@ header {
 	padding-inline: var(--padding-inline);
 	display: flex;
 	justify-content: space-between;
-
-	:focus-visible {
-		outline: initial;
-	}
 }
