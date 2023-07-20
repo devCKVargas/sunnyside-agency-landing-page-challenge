@@ -36,6 +36,9 @@
 	&:hover::after,
 	&:focus::after {
 		filter: opacity(100%);
+	}
 
+	&:active {
+		filter: brightness(90%);
 	}
 }

@@ -1,0 +1,141 @@
+@use "../abstracts/" as *;
+
+.nav {
+	--gap: min(2vw, 2rem);
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap);
+
+	@include minMedia($breakpoint-nav) {
+		// align-items: center;
+		// flex-direction: row;
+		// justify-content: space-between;
+		// max-width: $max-width;
+		// margin-inline: auto;
+	}
+
+	&__menu {
+		cursor: pointer;
+		right: var(--padding-inline);
+		margin-block: auto;
+
+		&:active {
+			filter: brightness(85%);
+		}
+
+		@include minMedia($breakpoint-nav) {
+			display: none;
+		}
+	}
+
+	&__list {
+		list-style: none;
+		text-align: center;
+		width: calc(100% - (var(--padding-inline) * 2));
+		background-color: var(--clr-white);
+		position: absolute;
+		top: 12rem;
+		left: 50%;
+		transform: translateX(-50%);
+		// display: none; //$ default state
+		// display: block; //! toggle hidden in JS
+
+		&::before {
+			content: "";
+			display: block;
+			height: 0;
+			width: 0;
+			position: absolute;
+			top: -2.9rem;
+			right: 0;
+			border-top: 3rem solid var(--clr-white);
+			border-left: 3rem solid transparent;
+			transform: rotate(90deg);
+		}
+
+		@include minMedia($breakpoint-nav) {
+			position: relative;
+			top: 0;
+			right: 0;
+			width: max-content;
+			display: flex;
+			align-items: center;
+			background-color: transparent;
+			gap: var(--gap);
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+
+
+	&__item {
+		--padding-block: 2rem;
+		--padding-inline: 3rem;
+
+		@include minMedia($breakpoint-nav) {
+			--padding-block: 1rem;
+			--padding-inline: 1.35rem;
+		}
+
+		a:link,
+		a:visited {
+			text-decoration: none;
+			font-family: $ff-main;
+			color: var(--clr-neutral-2);
+
+			display: block;
+			padding-block: var(--padding-block);
+			padding-inline: var(--padding-inline);
+
+			@include hover {
+				background-color: var(--clr-accent);
+				color: var(--clr-neutral-4);
+
+				@include minMedia($breakpoint-nav) {
+					background-color: initial;
+				}
+			}
+
+			&:active {
+				filter: brightness(90%);
+			}
+
+			@include minMedia($breakpoint-nav) {
+				color: var(--clr-white);
+				border-radius: 999rem;
+
+			}
+		}
+
+		&--contact {
+
+			a:link,
+			a:visited {
+				font-family: $ff-accent;
+				color: var(--clr-neutral-4);
+				text-transform: uppercase;
+				background: var(--clr-accent);
+
+				@include hover {
+					color: var(--clr-white);
+				}
+
+				@include minMedia($breakpoint-nav) {
+					background: var(--clr-white);
+					text-transform: uppercase;
+
+					display: inline-block;
+					padding-inline: var(--padding-inline);
+
+					@include hover {
+						background-color: var(--clr-contact);
+						color: var(--clr-white);
+					}
+				}
+			}
+		}
+	}
+}

@@ -45,6 +45,11 @@
 	// outline: 3px solid palegreen;
 }
 
+.sticky {
+	background-color: var(--clr-primary);
+	transition: $header-bg-transition;
+}
+
 .btn {
 	border: none;
 	background: none;

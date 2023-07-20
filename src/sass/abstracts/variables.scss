@@ -38,6 +38,9 @@ $breakpoint-xl: 1200em; // xl desktop
 $logo-min-size: 12.4rem;
 $logo-size: 20rem;
 
+$header-bg-transition: .3s ease-in-out;
+
+
 //! CSS Variables
 :root {
 	// colors
@@ -67,4 +70,12 @@ $logo-size: 20rem;
 	// spacing
 	--padding-block: min(6vw, 6rem);
 	--padding-inline: min(4vw, 4rem);
+	--padding-block-header: 1.4rem;
+
+	// --padding-block: min(10vw, 6rem);
+	// --padding-inline: min(10vw, 6rem);
+}
+
+* {
+	// outline: 3px solid salmon;
 }

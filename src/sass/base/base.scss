@@ -65,12 +65,10 @@ h3 {
 
 a {
 	text-decoration: none;
-	// color: $somecolor;
 
-	// @include on-event {
-	// 	color: $text-color;
-	// 	text-decoration: underline;
-	// }
+	&:active {
+		filter: brightness(90%);
+	}
 }
 
 /**

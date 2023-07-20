@@ -6,149 +6,18 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: greenyellow;
+	transition: $header-bg-transition;
 }
 
 .header-container {
-	padding-block: 1.5rem;
-	transition: .2s;
-
-	:focus-visible {
-		outline: initial;
-	}
-
+	max-width: $max-width;
+	margin-inline: auto;
+	padding-block: var(--padding-block-header);
+	padding-inline: var(--padding-inline);
 	display: flex;
 	justify-content: space-between;
 
-	background-color: darkcyan;
-	position: relative;
-}
-
-.sticky {
-	background-color: var(--clr-primary);
-}
-
-.nav {
-	// width: max-content;
-	// margin-inline: auto;
-	// background-color: lightcoral;
-
-	--gap: min(2vw, 2rem);
-	padding-inline: var(--padding-inline);
-	display: flex;
-	flex-direction: column;
-	gap: var(--gap);
-
-	@include minMedia($breakpoint-nav) {
-		// align-items: center;
-		// flex-direction: row;
-		// justify-content: space-between;
-		// max-width: $max-width;
-		// margin-inline: auto;
-	}
-
-	&__menu {
-		cursor: pointer;
-		// position: absolute;
-		// top: 0;
-		// transform: translateY(50%);
-		right: var(--padding-inline);
-		margin-block: auto;
-
-		&:active {
-			filter: brightness(85%);
-		}
-
-		@include minMedia($breakpoint-nav) {
-			display: none;
-		}
-	}
-
-	&__list {
-		position: absolute;
-		top: var(--padding-block);
-		left: 0;
-		list-style: none;
-		text-align: center;
-
-		background-color: var(--clr-white);
-		// display: none; //$ default state
-		// display: block; //! toggle hidden in JS
-
-		@include minMedia($breakpoint-nav) {
-			display: flex;
-			align-items: center;
-			background-color: transparent;
-			// top: 0;
-			gap: var(--gap);
-		}
-	}
-
-
-
-	&__item {
-		--padding-block: 2rem;
-		--padding-inline: 3rem;
-
-		@include minMedia($breakpoint-nav) {
-			--padding-block: 1rem;
-			--padding-inline: 1.35rem;
-		}
-
-		a:link,
-		a:visited {
-			text-decoration: none;
-			font-family: $ff-main;
-			color: var(--clr-neutral-2);
-
-			display: block;
-			padding-block: var(--padding-block);
-			padding-inline: var(--padding-inline);
-
-			@include hover {
-				background-color: var(--clr-accent);
-				color: var(--clr-neutral-4);
-
-				@include minMedia($breakpoint-nav) {
-					background-color: initial;
-				}
-			}
-
-			@include minMedia($breakpoint-nav) {
-				color: var(--clr-white);
-			}
-		}
-
-		&--contact {
-
-			a:link,
-			a:visited {
-				font-family: $ff-accent;
-				color: var(--clr-neutral-4);
-				text-transform: uppercase;
-				background: var(--clr-accent);
-
-				// padding-block: var(--padding-block);
-
-				@include hover {
-					color: var(--clr-white);
-				}
-
-				@include minMedia($breakpoint-nav) {
-					// --padding-inline: 2rem;
-					background: var(--clr-white);
-					text-transform: uppercase;
-
-					display: inline-block;
-					border-radius: 999rem;
-					padding-inline: var(--padding-inline);
-
-					@include hover {
-						background-color: var(--clr-contact);
-						color: var(--clr-white);
-					}
-				}
-			}
-		}
+	:focus-visible {
+		outline: initial;
 	}
 }
