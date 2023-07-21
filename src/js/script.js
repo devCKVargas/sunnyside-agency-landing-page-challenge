@@ -26,7 +26,7 @@ const scrollToSection = function (e) {
 
 	scroll({
 		top: offsetTop - navbarHeight,
-		// behavior: "smooth",
+		// behavior: "smooth", //! for future reference
 	});
 };
 

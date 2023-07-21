@@ -4,7 +4,7 @@
 	height: 100vh;
 	background: no-repeat bottom/cover url(../assets/img/mobile-header.jpg);
 
-	@include minMedia(600em) {
+	@include minMedia($breakpoint-md) {
 		background: no-repeat bottom/cover url(../assets/img/desktop-header.jpg);
 	}
 
