@@ -33,9 +33,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop](./screenshot-desktop.jpg)
-![Tablet](./screenshot-tablet.jpg)
-![Mobile](./screenshot-mobile.jpg)
+![Desktop](./screenshot-desktop.webp)
+![Tablet](./screenshot-tablet.webp)
+![Mobile](./screenshot-mobile.webp)
 
 ### Links
 
